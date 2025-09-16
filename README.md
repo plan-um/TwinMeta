@@ -54,8 +54,8 @@
 
 ### 1. 저장소 클론
 ```bash
-git clone https://github.com/YOUR_USERNAME/TwinMeta-User-Scenarios.git
-cd TwinMeta-User-Scenarios
+git clone https://github.com/plan-um/TwinMeta.git
+cd TwinMeta
 ```
 
 ### 2. 로컬에서 실행
