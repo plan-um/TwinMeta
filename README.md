@@ -61,7 +61,7 @@ cd TwinMeta
 ### 2. 로컬에서 실행
 ```bash
 # 브라우저에서 바로 열기
-open user_scenarios.html
+open index.html
 
 # 또는 HTTP 서버 실행
 python3 -m http.server 8000

@@ -30,7 +30,7 @@
 ### Setup & Local Development
 ```bash
 # 로컬에서 파일 열기
-open user_scenarios.html
+open index.html
 
 # 또는 간단한 HTTP 서버 실행 (Python)
 python3 -m http.server 8000
@@ -63,7 +63,7 @@ git push -u origin main
 git status
 
 # 파일 스테이징
-git add user_scenarios.html
+git add index.html
 
 # 커밋
 git commit -m "Update scenario content"
@@ -75,14 +75,14 @@ git push origin main
 ## 파일 구조
 
 ### 메인 파일
-- `user_scenarios.html`: 메인 시나리오 흐름도 페이지
+- `index.html`: 메인 시나리오 흐름도 페이지 (GitHub Pages 기본 페이지)
 - `WARP.md`: 프로젝트 가이드 (현재 파일)
 - `README.md`: 프로젝트 설명서
 
 ### 콘텐츠 구조
 ```
 TwinMeta/
-├── user_scenarios.html    # 메인 페이지
+├── index.html            # 메인 페이지 (GitHub Pages)
 ├── WARP.md               # Warp 가이드
 ├── README.md             # 프로젝트 문서
 └── .gitignore           # Git 무시 파일
@@ -176,7 +176,7 @@ git push origin main
 ## 업데이트 가이드
 
 ### 콘텐츠 수정 시
-1. `user_scenarios.html` 파일 직접 편집
+1. `index.html` 파일 직접 편집
 2. 브라우저에서 로컬 확인
 3. Git 커밋 후 푸시하여 GitHub Pages 자동 배포
 
