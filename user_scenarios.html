@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트윈메타 사용자 시나리오 흐름도</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #0A0F1C;
+            color: #E0E0E0;
+        }
+        .scenario-card {
+            background-color: #1A2035;
+            border: 1px solid #2A314E;
+            transition: all 0.3s ease;
+        }
+        .flow-step {
+            border-left: 2px solid #00D4FF;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .flow-step::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 4px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #0A0F1C;
+            border: 2px solid #00D4FF;
+        }
+        code {
+            background-color: #2A314E;
+            color: #00D4FF;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .cta-button {
+            color: #1A2035;
+            background-color: #00D4FF;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto px-4 py-12">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-white mb-2">🔮 트윈메타 사용자 시나리오</h1>
+            <p class="text-lg text-gray-400">사용자 유형별 서비스 이용 흐름도</p>
+        </header>
+
+        <main class="space-y-10">
+            <!-- 시나리오 그룹 1 -->
+            <div>
+                <h2 class="text-2xl font-bold text-white border-l-4 border-cyan-400 pl-4 mb-6">시나리오 그룹 1: 신규 방문 및 가입</h2>
+                <div class="space-y-4">
+                    <div class="scenario-card rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-cyan-300 mb-6">1-1. 서비스의 가치를 처음 접하고 회원가입까지 완료하는 시나리오</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🚀 시작점</h4>
+                                <p>사용자가 광고나 소셜 미디어를 통해 트윈메타를 알게 되어 랜딩 페이지<code>(W-001)</code>에 처음 방문한다.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 text-gray-300">🌊 흐름</h4>
+                                <div class="space-y-6">
+                                    <div class="flow-step">
+                                        <p class="font-semibold">가치 인지</p>
+                                        <p class="text-gray-400">랜딩 페이지<code>(W-001)</code>에서 '현실과 가상을 연결하는 Web3 커뮤니티 플랫폼'이라는 핵심 가치를 인지하고 주요 기능(NFT 티셔츠, 포인트, 트윈코드)을 살펴본다.</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <p class="font-semibold">가입 시작</p>
+                                        <p class="text-gray-400">흥미를 느끼고 <code>[Join]</code> 또는 <code>[시작하기]</code> 버튼을 클릭하여 회원가입 페이지<code>(W-002)</code>로 이동한다.</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <p class="font-semibold">3단계 가입 프로세스</p>
+                                        <ul class="list-disc list-inside text-gray-400 mt-2 space-y-2 pl-4">
+                                            <li><span class="font-medium text-gray-300">1단계:</span> 이메일 주소 입력 및 인증코드 확인으로 본인 인증 완료.</li>
+                                            <li><span class="font-medium text-gray-300">2단계:</span> 닉네임, 프로필 이미지 등 기본 정보 설정.</li>
+                                            <li><span class="font-medium text-gray-300">3단계:</span> <code>[MetaMask 연결]</code> 버튼을 눌러 지갑 연동<code>(W-004)</code> 승인.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flow-step">
+                                        <p class="font-semibold">가입 완료 및 서비스 진입</p>
+                                        <p class="text-gray-400">모든 과정이 완료되면, 로그인된 상태로 메인 홈<code>(W-003)</code>으로 자동 이동한다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🏁 종료점</h4>
+                                <p>사용자는 트윈메타의 정식 회원이 되어 모든 서비스를 이용할 준비를 마친다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scenario-card rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-cyan-300 mb-6">1-2. 기존 회원이 다시 방문하여 로그인하는 시나리오</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🚀 시작점</h4>
+                                <p>이미 계정이 있는 사용자가 서비스에 방문한다.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 text-gray-300">🌊 흐름</h4>
+                                <div class="space-y-6">
+                                    <div class="flow-step">
+                                        <p class="font-semibold">로그인</p>
+                                        <p class="text-gray-400">랜딩 페이지<code>(W-001)</code>에서 <code>[Login]</code> 버튼을 클릭 후, 이메일과 비밀번호로 로그인한다.</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <p class="font-semibold">서비스 접근</p>
+                                        <p class="text-gray-400">로그인 완료 후 메인 홈<code>(W-003)</code>으로 이동한다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🏁 종료점</h4>
+                                <p>사용자가 자신의 계정으로 서비스에 접근한다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 시나리오 그룹 2 -->
+            <div>
+                <h2 class="text-2xl font-bold text-white border-l-4 border-fuchsia-400 pl-4 mb-6">시나리오 그룹 2: 프로젝트 탐색 및 참여 (일반 사용자)</h2>
+                <div class="space-y-4">
+                    <div class="scenario-card rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-fuchsia-300 mb-6">2-1. 마음에 드는 프로젝트를 발견하고 '얼리버드'에 참여하는 시나리오</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🚀 시작점</h4>
+                                <p>로그인한 사용자가 새로운 프로젝트를 탐색하기 위해 메인 홈<code>(W-003)</code>에 있다.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 text-gray-300">🌊 흐름</h4>
+                                <div class="space-y-6">
+                                    <div class="flow-step">
+                                        <p class="font-semibold">프로젝트 탐색 및 선택</p>
+                                        <p class="text-gray-400">'신규 프로젝트' 목록에서 특정 카드를 클릭하여 프로젝트 상세 페이지<code>(W-011)</code>로 이동한다.</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <p class="font-semibold">얼리버드 정보 확인 및 참여</p>
+                                        <p class="text-gray-400"><code>[얼리버드]</code> 탭에서 현황을 확인하고, <code>[얼리버드 참여하기]</code> 버튼을 눌러 미션 센터<code>(W-012)</code>로 진입한다.</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <p class="font-semibold">미션 수행 및 보상 획득</p>
+                                        <p class="text-gray-400">응원 메시지 작성(50P), 픽셀 아트 참여(30P) 등 주어진 미션을 수행하고 즉시 포인트를 보상으로 받는다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🏁 종료점</h4>
+                                <p>사용자가 프로젝트에 능동적으로 기여하고 보상을 받으며 커뮤니티의 일원임을 느낀다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scenario-card rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-fuchsia-300 mb-6">2-2. 얼리버드 참여 후, NFT를 구매하는 시나리오</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🚀 시작점</h4>
+                                <p>얼리버드 참여 자격을 얻은 사용자가 프로젝트 상세 페이지<code>(W-011)</code>에 있다.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 text-gray-300">🌊 흐름</h4>
+                                <div class="space-y-6">
+                                    <div class="flow-step">
+                                        <p class="font-semibold">구매 시작</p>
+                                        <p class="text-gray-400"><code>[구매하기]</code> 버튼을 클릭하여 NFT 구매 페이지<code>(W-013)</code>로 이동한다.</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <p class="font-semibold">옵션 선택 및 주문 확인</p>
+                                        <p class="text-gray-400">원하는 '수량'과 '사이즈'를 선택하고, 주문 요약에서 총금액을 최종 확인한다.</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <p class="font-semibold">결제 및 민팅</p>
+                                        <p class="text-gray-400"><code>[결제하기]</code>를 누르면 활성화되는 메타마스크 지갑에서 트랜잭션을 승인한다. 결제 완료<code>(W-015)</code> 페이지에서 NFT 민팅 과정을 확인한다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🏁 종료점</h4>
+                                <p>사용자가 성공적으로 NFT를 구매하고, 실물 티셔츠를 받을 권리를 획득한다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 시나리오 그룹 3 -->
+            <div>
+                <h2 class="text-2xl font-bold text-white border-l-4 border-emerald-400 pl-4 mb-6">시나리오 그룹 3: NFT 및 활동 관리 (보유자)</h2>
+                <div class="space-y-4">
+                    <div class="scenario-card rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-emerald-300 mb-6">3-1. 구매한 NFT를 확인하고 실물을 인증하는 시나리오</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🚀 시작점</h4>
+                                <p>NFT를 구매한 사용자가 자신의 디지털 및 실물 자산을 확인하고 싶어한다.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 text-gray-300">🌊 흐름</h4>
+                                <div class="space-y-6">
+                                    <div class="flow-step">
+                                        <p class="font-semibold">NFT 확인</p>
+                                        <p class="text-gray-400">마이페이지<code>(W-030)</code>의 '보유 NFT' 탭에서 구매한 NFT 목록과 상세 정보<code>(W-022)</code>를 확인한다.</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <p class="font-semibold">실물 인증</p>
+                                        <p class="text-gray-400">실물 티셔츠 수령 후, 모바일 앱의 NFC 인증<code>(M-001)</code> 기능으로 티셔츠 태그를 스캔하여 소유권을 최종 확인<code>(W-025)</code>한다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🏁 종료점</h4>
+                                <p>사용자가 디지털 자산(NFT)과 실물 자산의 연결을 직접 경험하며 서비스의 신뢰도를 체감한다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scenario-card rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-emerald-300 mb-6">3-2. 자신의 활동 내역과 포인트를 확인하는 시나리오</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🚀 시작점</h4>
+                                <p>사용자가 그동안의 활동으로 쌓인 포인트를 확인하고 싶어한다.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 text-gray-300">🌊 흐름</h4>
+                                <div class="space-y-6">
+                                    <div class="flow-step">
+                                        <p class="font-semibold">포인트 및 레벨 확인</p>
+                                        <p class="text-gray-400">마이페이지<code>(W-030)</code>에서 현재 레벨과 포인트, 다음 레벨까지의 진행률을 확인한다.</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <p class="font-semibold">상세 내역 조회</p>
+                                        <p class="text-gray-400"><code>[포인트]</code> 탭<code>(W-023)</code>에서 획득/사용 내역을 조회하고, '포인트 획득 상세'<code>(W-090)</code> 페이지에서 7가지 획득 방식을 학습한다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🏁 종료점</h4>
+                                <p>사용자가 포인트 시스템을 이해하고, 더 많은 활동에 참여할 동기를 부여받는다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 시나리오 그룹 4 -->
+            <div>
+                <h2 class="text-2xl font-bold text-white border-l-4 border-yellow-400 pl-4 mb-6">시나리오 그룹 4: 트윈코드 활용</h2>
+                <div class="space-y-4">
+                    <div class="scenario-card rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-yellow-300 mb-6">4-1. 다른 사용자의 실물 티셔츠를 스캔하고 포인트를 얻는 시나리오</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🚀 시작점</h4>
+                                <p>사용자가 오프라인에서 트윈메타 티셔츠를 입은 다른 사용자를 만난다.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 text-gray-300">🌊 흐름</h4>
+                                <div class="space-y-6">
+                                    <div class="flow-step">
+                                        <p class="font-semibold">스캐너 실행</p>
+                                        <p class="text-gray-400">'트윈코드' 메뉴의 스캐너<code>(W-050)</code>를 실행한다.</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <p class="font-semibold">스캔 및 보상</p>
+                                        <p class="text-gray-400">상대방 티셔츠의 트윈코드를 스캔하여 NFT 정보를 확인하고, 보상으로 10P를 획득한다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🏁 종료점</h4>
+                                <p>사용자가 오프라인에서의 재미있는 인터랙션을 통해 온라인 보상을 얻는 경험을 한다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 시나리오 그룹 5 -->
+             <div>
+                <h2 class="text-2xl font-bold text-white border-l-4 border-rose-400 pl-4 mb-6">시나리오 그룹 5: 수익 창출 및 관리 (트윈커 & TD)</h2>
+                <div class="space-y-4">
+                    <div class="scenario-card rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-rose-300 mb-6">5-1. 크리에이터(트윈커)가 새로운 프로젝트를 생성하는 시나리오</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🚀 시작점</h4>
+                                <p>트윈커 권한을 가진 사용자가 새로운 NFT 프로젝트를 런칭하고자 한다.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 text-gray-300">🌊 흐름</h4>
+                                <div class="space-y-6">
+                                    <div class="flow-step">
+                                        <p class="font-semibold">프로젝트 생성 시작</p>
+                                        <p class="text-gray-400">트윈커 대시보드<code>(W-040)</code>에서 <code>[+ 새 프로젝트]</code>를 클릭하여 생성 마법사<code>(W-110)</code>를 시작한다.</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <p class="font-semibold">자동화된 설정</p>
+                                        <p class="text-gray-400">기본 정보 입력 후, 시스템이 추천하는 '자동 라운드 설정'을 적용하여 복잡한 판매 계획을 손쉽게 수립하고 프로젝트를 등록한다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🏁 종료점</h4>
+                                <p>트윈커가 복잡한 과정 없이 손쉽게 자신의 아이디어를 Web3 프로젝트로 현실화한다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scenario-card rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-rose-300 mb-6">5-2. 디자이너(TD)가 프로젝트에 참여하고 수익 옵션을 설정하는 시나리오</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🚀 시작점</h4>
+                                <p>TD 권한을 가진 사용자가 자신의 디자인 역량으로 수익을 창출하고 싶어한다.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 text-gray-300">🌊 흐름</h4>
+                                <div class="space-y-6">
+                                    <div class="flow-step">
+                                        <p class="font-semibold">프로젝트 지원</p>
+                                        <p class="text-gray-400">TD 대시보드<code>(W-080)</code>의 '매칭 요청' 목록에서 AI 추천 프로젝트를 확인하고 입찰에 참여한다.</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <p class="font-semibold">수익화</p>
+                                        <p class="text-gray-400">파트너로 선정된 후, '수익 옵션 설정'에서 원하는 방식을 선택하고, 실시간 수익 분배 대시보드<code>(W-095)</code>에서 수익을 확인한다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🏁 종료점</h4>
+                                <p>디자이너가 자신의 재능을 Web3 생태계에서 안정적으로 수익화한다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 시나리오 그룹 6 -->
+             <div>
+                <h2 class="text-2xl font-bold text-white border-l-4 border-blue-400 pl-4 mb-6">시나리오 그룹 6: 커뮤니티 기여 및 확산</h2>
+                <div class="space-y-4">
+                    <div class="scenario-card rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-blue-300 mb-6">6-1. 친구를 초대하여 레퍼럴 보상을 받는 시나리오</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🚀 시작점</h4>
+                                <p>트윈메타에 만족한 사용자가 친구에게 서비스를 추천하고자 한다.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 text-gray-300">🌊 흐름</h4>
+                                <div class="space-y-6">
+                                    <div class="flow-step">
+                                        <p class="font-semibold">초대 코드 공유</p>
+                                        <p class="text-gray-400">레퍼럴 대시보드<code>(W-060)</code>에서 자신의 초대 코드를 복사하여 친구에게 전달한다.</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <p class="font-semibold">보상 획득</p>
+                                        <p class="text-gray-400">친구가 가입 및 활동을 하면 '보상 내역'에서 포인트가 적립된 것을 확인하고, 누적 실적에 따라 'NFT 뱃지' 등급이 상승한다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-gray-300">🏁 종료점</h4>
+                                <p>사용자가 서비스의 성장에 기여하고, 그에 대한 명확한 보상을 받으며 충성도를 높인다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>
